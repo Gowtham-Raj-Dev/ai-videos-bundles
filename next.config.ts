@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+  async rewrites() {
+    return [
+      {
+        source: '/__/auth/:path*',
+        destination: 'https://ai-videos-e6e03.firebaseapp.com/__/auth/:path*',
+      },
+    ];
+  },
   /* 
   // Next.js static export does not support custom headers()
   async headers() {

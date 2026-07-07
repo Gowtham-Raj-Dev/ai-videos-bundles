@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAgYb5vPz_feK-aXfIemd1L6dA4dxnd3-8",
-  authDomain: "ai-videos-e6e03.firebaseapp.com",
+  authDomain: "bundles.codelove.in",
   projectId: "ai-videos-e6e03",
   storageBucket: "ai-videos-e6e03.firebasestorage.app",
   messagingSenderId: "37879856930",
