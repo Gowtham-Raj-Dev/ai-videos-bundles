@@ -1,12 +1,12 @@
-﻿import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import Razorpay from 'razorpay';
 
 export async function POST(request: Request) {
   try {
     const { amount = 25, currency = 'INR' } = await request.json();
 
-    const keyId = process.env.RAZORPAY_KEY_ID || 'rzp_live_T1ZGJz5iR0rxLf';
-    const keySecret = process.env.RAZORPAY_KEY_SECRET || 'ApJDK5UtcC5kmGKYcP3wjTEv';
+    const keyId = process.env.RAZORPAY_KEY_ID || '';
+    const keySecret = process.env.RAZORPAY_KEY_SECRET || '';
 
     // Initialize Razorpay
     const razorpay = new Razorpay({

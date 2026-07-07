@@ -1,11 +1,11 @@
-﻿import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 
 export async function POST(request: Request) {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = await request.json();
 
-    const secret = process.env.RAZORPAY_KEY_SECRET || 'ApJDK5UtcC5kmGKYcP3wjTEv';
+    const secret = process.env.RAZORPAY_KEY_SECRET || '';
 
     // Generate expected signature
     const shasum = crypto.createHmac('sha256', secret);
